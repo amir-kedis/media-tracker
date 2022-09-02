@@ -37,6 +37,6 @@ A website to help you keep track of all the video media that you watched, are wa
 
 ## TODO:
 - [ ] project set up
-    - [ ] python
-    - [ ] sass
+    - [X] python
+    - [X] sass
     - [ ] server

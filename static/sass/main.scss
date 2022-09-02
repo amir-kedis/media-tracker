@@ -1,4 +1,3 @@
-@use 'components/TODO';
-body {
-    background-color: salmon;
-}
+@use 'global';
+@use 'components';
+

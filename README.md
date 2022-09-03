@@ -36,7 +36,8 @@ A website to help you keep track of all the video media that you watched, are wa
 ## expect to finish in: **4 days**
 
 ## TODO:
-- [ ] project set up
+- [X] project set up
     - [X] python
     - [X] sass
-    - [ ] server
+    - [X] server
+- [ ] make a nav bar

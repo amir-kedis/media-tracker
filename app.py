@@ -1,4 +1,9 @@
+# ----------------------------------
+# ------: import libs and functions
+# ----------------------------------
+
 # import libs
+from crypt import methods
 import os
 from flask import Flask, render_template, session, request, redirect, jsonify
 from flask_session import Session
@@ -6,6 +11,10 @@ from cs50 import SQL
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 from functools import wraps
+
+# ----------------------------------
+# ------: configurations
+# ----------------------------------
 
 # init main app
 app = Flask(__name__)
@@ -30,6 +39,10 @@ def after_request(response):
 # connect media database
 db = SQL("sqlite:///media.db")
 
+# ----------------------------------
+# ------: Helper functions
+# ----------------------------------
+
 # error page
 def apology(message, code=400):
     return render_template("error.html", code=code, msg=message)
@@ -45,6 +58,10 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+# ----------------------------------
+# ------: Routes
+# ----------------------------------
+
 # index route
 @app.route("/")
 @login_required
@@ -57,9 +74,20 @@ def register():
     return render_template("TODO.html")
 
 # login route
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    return render_template("TODO.html")
+    """Log user in"""
+
+    # Forget any user_id
+    session.clear()
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    if request.method == "GET": 
+        return render_template("login.html")
+
+    # User reached route via POST (as by submitting a form via POST)
+    else:
+        return render_template("TODO.html")
 
 # logout route
 @app.route("/logout")

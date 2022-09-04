@@ -44,5 +44,7 @@ A website to help you keep track of all the video media that you watched, are wa
 - [X] design the database
 - [X] connect data base
 - [X] error page
-- [ ] require login wrapper
+- [X] require login wrapper
+- [ ] login page
+- [ ] logout page
 - [ ] register page design

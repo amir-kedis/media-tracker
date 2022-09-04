@@ -1,0 +1,13 @@
+@use '../util' as u;
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include u.breakpointUp("small") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include u.breakpointUp("extraLarge") {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    gap: 4rem;
+}

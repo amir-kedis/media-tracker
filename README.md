@@ -49,3 +49,5 @@ A website to help you keep track of all the video media that you watched, are wa
 - [X] logout page
 - [X] register page design
 - [X] add media design
+- [ ] make a design for edit list page
+- [ ] make a design for Watching

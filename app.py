@@ -232,7 +232,9 @@ def watched():
 @app.route("/watching")
 @login_required
 def watching():
-    return render_template("TODO.html")
+    user_id = session["user_id"]
+
+    return render_template("watching.html")
 
 # plan_to_watch route
 @app.route("/plan_to_watch")

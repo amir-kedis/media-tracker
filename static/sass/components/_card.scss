@@ -1,0 +1,35 @@
+.card {
+    background-color: var(--form-bgc);
+
+    img {
+        max-width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 700;
+        padding: 1rem;
+    }
+
+    &__type {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        font-size: 20px;
+        font-weight: 700;
+        color: #B4B4B4;
+    }
+
+    &__status {
+        font-size: 15px;
+        font-weight: 700;
+        background-color: var(--btn-bgc);
+        display: inline-block;
+        padding: 10px 24px;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 3rem;
+    }
+}

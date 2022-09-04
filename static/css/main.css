@@ -352,6 +352,7 @@ ul {
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
+  height: 100%;
 }
 @media (min-width: 576px) {
   .container {
@@ -365,12 +366,13 @@ ul {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1300px;
   }
 }
 
 .row {
   display: flex;
+  height: 100%;
 }
 
 .TODO {
@@ -389,5 +391,32 @@ ul {
 
 .nav {
   background-color: var(--navbgc);
-  min-height: 80px;
+}
+.nav .row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  gap: 15px;
+}
+.nav__title {
+  cursor: pointer;
+}
+.nav__logo {
+  margin: 0;
+  font-weight: 800;
+}
+.nav__links--right {
+  margin-left: auto;
+}
+.nav__list {
+  display: flex;
+  gap: 20px;
+}
+.nav__link {
+  font-size: 1.2rem;
+  transition: all 0.1s ease-in-out;
+  display: block;
+}
+.nav__link:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=main.css.map */

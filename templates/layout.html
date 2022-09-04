@@ -16,48 +16,55 @@
 <body>
     <nav class="nav">
         <div class="container">
-            <div class="nav__title">
-                <h1 class="nav__logo">
-                    Media Tracker
-                </h1>
+            <div class="row">
+
+                <div class="nav__title">
+                    <h1 class="nav__logo">
+                        <a href="/">Media Tracker</a>
+                    </h1>
+                </div>
+                {% if session["user_id"] %}
+
+                <div class="nav__links nav__links--left">
+                    <ul class="nav__list">
+                        <li class="nav__listitem">
+                            <a href="/add_media" class="nav__link">ADD MEDIA</a>
+                        </li>
+                        <li class="nav__listitem">
+                            <a href="/edit_list" class="nav__link">EDIT LIST</a>
+                        </li>
+                        <li class="nav__listitem">
+                            <a href="/watched" class="nav__link">WATCHED</a>
+                        </li>
+                        <li class="nav__listitem">
+                            <a href="/watching" class="nav__link">WATCHING</a>
+                        </li>
+                        <li class="nav__listitem">
+                            <a href="/plan_to_watch" class="nav__link">PLAN TO WATCH</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__links nav__links--right">
+                    <ul class="nav__list">
+                        <li class="nav__listitem">
+                            <a href="/logout" class="nav__link">LOGOUT</a>
+                        </li>
+                    </ul>
+                </div>
+                {% else %}
+                <div class="nav__links nav__links--right">
+                    <ul class="nav__list">
+                        <li class="nav__listitem">
+                            <a href="/login" class="nav__link">LOGIN</a>
+                        </li>
+                        <li class="nav__listitem">
+                            <a href="/register" class="nav__link">REGISTER</a>
+                        </li>
+                    </ul>
+                </div>
+                {% endif %}
+
             </div>
-            {% if session["user_id"] %}
-            <div class="nav__links nav__links--left">
-                <ul class="nav__list">
-                    <li class="nav__listitem">
-                        <a href="/add_media" class="nav__link">ADD MEDIA</a>
-                    </li>
-                    <li class="nav__listitem">
-                        <a href="/edit_list" class="nav__link">EDIT LIST</a>
-                    </li>
-                    <li class="nav__listitem">
-                        <a href="/watched" class="nav__link">WATCHED</a>
-                    </li>
-                    <li class="nav__listitem">
-                        <a href="/watching" class="nav__link">WATCHING</a>
-                    </li>
-                    <li class="nav__listitem">
-                        <a href="/plan_to_watch" class="nav__link">PLAN TO WATCH</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="nav__links nav__links--right">
-                <ul class="nav__list">
-                    <li class="nav__listitem">
-                        <a href="/logout" class="nav__link">LOGOUT</a>
-                    </li>
-                </ul>
-            </div>
-            {% else %}
-            <div class="nav__links nav__links--right">
-                <ul class="nav__list">
-                    <li class="nav__listitem">
-                        <a href="/register" class="nav__link">REGISTER</a>
-                        <a href="/login" class="nav__link">LOG IN</a>
-                    </li>
-                </ul>
-            </div>
-            {% endif %}
         </div>
     </nav>
     {% block body %}

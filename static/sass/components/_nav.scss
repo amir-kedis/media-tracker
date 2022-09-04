@@ -1,4 +1,33 @@
 .nav {
-    background-color: var(--navbgc);
-    min-height: 80px;
+  background-color: var(--navbgc);
+  .row {    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    gap: 15px;
+  }
+  &__title {
+    cursor: pointer;
+  }
+  &__logo {
+    margin: 0;
+    font-weight: 800;
+  }
+  &__links {
+    &--right {
+        margin-left: auto;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+  &__link {
+    font-size: 1.2rem;
+    transition: all 0.1s ease-in-out;
+    display: block;
+    &:hover {
+        transform: scale(1.1);
+    }
+  }
 }

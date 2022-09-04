@@ -6,6 +6,7 @@
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
+  height: 100%;
 
   @include u.breakpointUp("small") {
     max-width: 540px;
@@ -17,10 +18,11 @@
     max-width: 960px;
   }
   @include u.breakpointUp("extraLarge") {
-    max-width: 1140px;
+    max-width: 1300px;
   }
 }
 
 .row {
     display: flex;
+    height: 100%;
 }

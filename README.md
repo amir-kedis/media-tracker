@@ -42,5 +42,6 @@ A website to help you keep track of all the video media that you watched, are wa
     - [X] server
 - [X] make a nav bar
 - [X] design the database
-- [ ] connect data base
+- [X] connect data base
+- [ ] register page design
 - [ ] error page

@@ -1,0 +1,4 @@
+-- SQLite
+DELETE *
+FROM
+    media

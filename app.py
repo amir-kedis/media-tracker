@@ -200,6 +200,13 @@ def addMedia():
         if not img:
             return apology("Must Provide Image")
 
+        mediaName = mediaName.strip().lower()
+
+        media_db = db.execute("SELECT name FROM media WHERE user_id = ? AND name = ?", user_id, mediaName)
+
+        if len(media_db) != 0:
+            return apology("media already exists")
+
         # get date
         date = date = datetime.datetime.now()
 

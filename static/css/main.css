@@ -530,6 +530,7 @@ body {
 
 .card {
   background-color: var(--form-bgc);
+  transition: transform 0.1s;
 }
 .card img {
   max-width: 100%;
@@ -561,6 +562,9 @@ body {
   margin-left: 1rem;
   margin-bottom: 1rem;
   border-radius: 3rem;
+}
+.card:hover {
+  transform: scale(1.05);
 }
 
 .add_media {

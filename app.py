@@ -69,9 +69,54 @@ def index():
     return render_template("TODO.html")
 
 # register route
-@app.route("/register")
+@app.route("/register", methods=["GET", "POST"])
 def register():
-    return render_template("TODO.html")
+    """Register a user"""
+
+    # Forget any user_id
+    session.clear()
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    if request.method == "GET": 
+        return render_template("register.html")
+
+    # User reached route via POST (as by submitting a form via POST)
+    else:
+
+        username = request.form.get("username")
+        password = request.form.get("password")
+        confirmation = request.form.get("confirmation")
+
+        # ensure user provided username
+        if not username:
+            return apology("must provide username", 403)
+            
+        # ensure user provided password
+        if not password:
+            return apology("must provide password", 403)
+
+        # ensure user confirm password
+        if not confirmation:
+            return apology("must confirm password", 403)
+
+        # ensure password and confirmation are the same
+        if password != confirmation:
+            return apology("password and confirmation must be the same", 403)
+
+        # make a password hash
+        hash = generate_password_hash(password)
+
+        # insert user into database
+        try:
+            new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+        except:
+            return apology("Username already taken")
+
+        # remember the user
+        session["user_id"] = new_user
+
+        # redirect user to home page
+        return redirect("/")
 
 # login route
 @app.route("/login", methods=["GET", "POST"])
@@ -92,7 +137,7 @@ def login():
         if not request.form.get("username"):
             return apology("must provide username", 403)
             
-        # ensure user provided username
+        # ensure user provided password
         if not request.form.get("password"):
             return apology("must provide password", 403)
 

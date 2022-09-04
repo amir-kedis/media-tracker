@@ -14,9 +14,9 @@ A website to help you keep track of all the video media that you watched, are wa
 - SQL
 
 ## Features to make:
-- [ ] register
-- [ ] login 
-- [ ] Logout system
+- [X] register
+- [X] login 
+- [X] Logout system
 - [ ] add a media
     - media should have:
         - name
@@ -45,6 +45,6 @@ A website to help you keep track of all the video media that you watched, are wa
 - [X] connect data base
 - [X] error page
 - [X] require login wrapper
-- [ ] login page
-- [ ] logout page
-- [ ] register page design
+- [X] login page
+- [X] logout page
+- [X] register page design

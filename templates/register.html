@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %} Register {% endblock %}
+{% block body %}
+<div class="login">
+    <div class="login__wrapper">
+        <form action="/register" method="post" class="form">
+            <h2 class="form__title">
+                Register
+            </h2>
+            <ul class="form__inputs">
+                <li class="form__input">
+                    <label for="username" class="form__label">Username</label>
+                    <input type="text" name="username" class="input">
+                </li>
+                <li class="form__input">
+                    <label for="password" class="form__label">Password</label>
+                    <input type="password" name="password" class="input">
+                </li>
+                <li class="form__input">
+                    <label for="confirmation" class="form__label">Confirm Password</label>
+                    <input type="password" name="confirmation" class="input">
+                </li>
+            </ul>
+            <input class="btn" type="submit" value="REGISTER">
+        </form>
+    </div>
+</div>
+{% endblock %}

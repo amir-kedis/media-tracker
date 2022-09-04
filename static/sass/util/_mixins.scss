@@ -1,0 +1,19 @@
+@mixin breakpointUp($device) {
+  @if $device == "small" {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $device == "medium" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $device == "Large" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $device == "extraLarge" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

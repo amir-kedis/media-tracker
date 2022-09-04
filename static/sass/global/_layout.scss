@@ -1,0 +1,26 @@
+@use "../util/index" as u;
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include u.breakpointUp("small") {
+    max-width: 540px;
+  }
+  @include u.breakpointUp("medium") {
+    max-width: 720px;
+  }
+  @include u.breakpointUp("large") {
+    max-width: 960px;
+  }
+  @include u.breakpointUp("extraLarge") {
+    max-width: 1140px;
+  }
+}
+
+.row {
+    display: flex;
+}

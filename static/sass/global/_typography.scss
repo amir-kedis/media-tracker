@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    color: var(--txtc);
 }
 
 h1, h2, h2 {
@@ -16,5 +17,10 @@ p {
 
 a, a:visited, a:active {
     text-decoration: none;
+    color: var(--txtc);
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+}

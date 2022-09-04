@@ -316,6 +316,7 @@ template {
 
 body {
   font-family: "Poppins", sans-serif;
+  color: var(--txtc);
 }
 
 h1, h2, h2 {
@@ -330,6 +331,12 @@ p {
 
 a, a:visited, a:active {
   text-decoration: none;
+  color: var(--txtc);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 * {
@@ -337,6 +344,33 @@ a, a:visited, a:active {
   margin: 0;
   padding: 0;
   font-size: 100%;
+}
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: flex;
 }
 
 .TODO {

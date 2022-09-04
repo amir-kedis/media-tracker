@@ -166,7 +166,7 @@ def logout():
     return redirect("/")
 
 # add_media route
-@app.route("/add_media")
+@app.route("/add_media", methods=["GET", "POST"])
 @login_required
 def addMedia():
     return render_template("TODO.html")

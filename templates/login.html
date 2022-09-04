@@ -2,6 +2,23 @@
 {% block title %} Login {% endblock %}
 {% block body %}
 <div class="login">
-    <h1 class="login__heading">LOGIN</h1>
+    <div class="login__wrapper">
+        <form action="/login" method="post" class="form">
+            <h2 class="form__title">
+                LOGIN
+            </h2>
+            <ul class="form__inputs">
+                <li class="form__input">
+                    <label for="username" class="form__label">Username</label>
+                    <input type="text" name="username" class="input">
+                </li>
+                <li class="form__input">
+                    <label for="password" class="form__label">Password</label>
+                    <input type="password" name="password" class="input">
+                </li>
+            </ul>
+            <input class="btn" type="submit" value="LOGIN">
+        </form>
+    </div>
 </div>
 {% endblock %}

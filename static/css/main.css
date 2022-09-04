@@ -309,9 +309,11 @@ template {
 }
 
 :root {
-  --bgc: #151116;
+  --bgc: #111116;
   --navbgc: #505050;
-  --txtc: #FFFFFF ;
+  --txtc: #FFFFFF;
+  --form-bgc: #242631;
+  --btn-bgc: #3D24D6;
 }
 
 body {
@@ -440,4 +442,67 @@ body {
 .error__msg {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 60px;
+}
+
+.btn {
+  flex: 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--btn-bgc);
+  color: var(--txtc);
+  font-size: 24px;
+  font-weight: 700;
+  padding: 15px 65px;
+  align-self: center;
+  border-radius: 8px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.form__title {
+  font-size: 36px;
+  text-align: center;
+}
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__label {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.input {
+  background-color: var(--form-bgc);
+  color: var(--txtc);
+  outline: none;
+  border: 2px solid var(--btn-bgc);
+  min-width: 30vw;
+  font-size: 20px;
+  min-height: 40px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+.login__wrapper {
+  padding: 60px 80px;
+  background-color: var(--form-bgc);
+  border-radius: 12px;
+  box-shadow: -2px 8px 4px 0 rgba(0, 0, 0, 0.25);
 }/*# sourceMappingURL=main.css.map */

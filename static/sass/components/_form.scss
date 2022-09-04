@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__title {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__label {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+.input {
+    background-color: var(--form-bgc);
+    color: var(--txtc);
+    outline: none;
+    border: 2px solid var(--btn-bgc);
+    min-width: 30vw;
+    font-size: 20px;
+    min-height: 40px;
+    padding: 15px;
+    border-radius: 10px;
+}

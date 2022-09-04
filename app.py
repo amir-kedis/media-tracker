@@ -5,6 +5,7 @@ from flask_session import Session
 from cs50 import SQL
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
+from functools import wraps
 
 # init main app
 app = Flask(__name__)
@@ -17,6 +18,7 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
+# disable cache
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
@@ -32,8 +34,20 @@ db = SQL("sqlite:///media.db")
 def apology(message, code=400):
     return render_template("error.html", code=code, msg=message)
 
+def login_required(f):
+    """
+    Decorate routes to require login.
+    """
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if session.get("user_id") is None:
+            return redirect("/login")
+        return f(*args, **kwargs)
+    return decorated_function
+
 # index route
 @app.route("/")
+@login_required
 def index():
     return render_template("TODO.html")
 
@@ -54,26 +68,31 @@ def logout():
 
 # add_media route
 @app.route("/add_media")
+@login_required
 def addMedia():
     return render_template("TODO.html")
 
 # edit_list route
 @app.route("/edit_list")
+@login_required
 def editList():
     return render_template("TODO.html")
 
 # watched route
 @app.route("/watched")
+@login_required
 def watched():
     return render_template("TODO.html")
 
 # watching route
 @app.route("/watching")
+@login_required
 def watching():
     return render_template("TODO.html")
 
 # plan_to_watch route
 @app.route("/plan_to_watch")
+@login_required
 def planToWatch():
     return render_template("TODO.html")
 

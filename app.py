@@ -169,7 +169,11 @@ def logout():
 @app.route("/add_media", methods=["GET", "POST"])
 @login_required
 def addMedia():
-    return render_template("TODO.html")
+    """ ADD MEDIA """
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    if request.method == "GET": 
+        return render_template("add_media.html")
 
 # edit_list route
 @app.route("/edit_list")

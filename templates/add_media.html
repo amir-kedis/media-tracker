@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %} Add Media {% endblock %}
+{% block body %}
+<div class="add_media">
+
+    <h2 class="add_media__title">
+        ADD A MEDIA
+    </h2>
+
+    <div class="add_media__form">
+        <div class="container add_media__container">
+            <form action="/add_media" class="form" method="post">
+                <ul class="form__inputs">
+                    <li class="form__row">
+                        <div class="form__input">
+                            <label for="media_name" class="form__label">Media Name</label>
+                            <input autocomplete="off" autofocus type="text" name="media_name" class="input">
+                        </div>
+                        <div class="form__input">
+                            <label for="status" class="form__label">Status</label>
+                            <select class="form__select input" name="status">
+                                <option value="watched">Watched</option>
+                                <option value="watching">Watching</option>
+                                <option value="planToWatch">Plan To Watch</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="form__row">
+                        <div class="form__input">
+                            <label for="type" class="form__label">Type</label>
+                            <select class="form__select input" name="type">
+                                <option value="movie">Movie</option>
+                                <option value="series">Series</option>
+                                <option value="anime">Anime</option>
+                                <option value="shortFilm">Short Film</option>
+                                <option value="video">Video</option>
+                            </select>
+                        </div>
+                        <div class="form__input">
+                            <label for="img" class="form__label">Cover Image Url</label>
+                            <input autocomplete="off" autofocus type="url" name="img" class="input">
+                        </div>
+                    </li>
+                </ul>
+                <input type="submit" value="ADD" class="btn">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

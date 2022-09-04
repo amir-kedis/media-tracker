@@ -48,3 +48,4 @@ A website to help you keep track of all the video media that you watched, are wa
 - [X] login page
 - [X] logout page
 - [X] register page design
+- [X] add media design

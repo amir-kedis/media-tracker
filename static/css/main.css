@@ -346,6 +346,10 @@ ul {
   font-size: 100%;
 }
 
+body {
+  background-color: var(--bgc);
+}
+
 .container {
   max-width: 100%;
   margin-left: auto;
@@ -419,4 +423,21 @@ ul {
 }
 .nav__link:hover {
   transform: scale(1.1);
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+.error__code {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 80px;
+}
+.error__msg {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 60px;
 }/*# sourceMappingURL=main.css.map */

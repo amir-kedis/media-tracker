@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %} TODO {% endblock %}
+{% block body %}
+<div class="error">
+    <div class="error__code">
+        {{ code }}
+    </div>
+    <div class="error__img">
+        <img src="/static/imgs/angry-todo.webp" alt="error-img: angry Todo">
+    </div>
+    <div class="error__msg">
+        {{ msg }}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+
+    &__code {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 80px;
+    }
+
+    &__msg {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 60px;
+    }
+
+}

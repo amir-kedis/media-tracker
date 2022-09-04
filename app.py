@@ -28,6 +28,10 @@ def after_request(response):
 # connect media database
 db = SQL("sqlite:///media.db")
 
+# error page
+def apology(message, code=400):
+    return render_template("error.html", code=code, msg=message)
+
 # index route
 @app.route("/")
 def index():

@@ -20,11 +20,13 @@
         font-size: 20px;
         font-weight: 700;
         color: #B4B4B4;
+        text-transform: uppercase;
     }
 
     &__status {
         font-size: 15px;
         font-weight: 700;
+        text-transform: uppercase;
         background-color: var(--btn-bgc);
         display: inline-block;
         padding: 10px 24px;

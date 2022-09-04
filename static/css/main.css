@@ -549,10 +549,12 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: #B4B4B4;
+  text-transform: uppercase;
 }
 .card__status {
   font-size: 15px;
   font-weight: 700;
+  text-transform: uppercase;
   background-color: var(--btn-bgc);
   display: inline-block;
   padding: 10px 24px;
@@ -594,4 +596,7 @@ body {
 }
 .watching .title {
   margin-bottom: 3rem;
+}
+.watching__main {
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=main.css.map */

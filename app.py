@@ -232,9 +232,15 @@ def watched():
 @app.route("/watching")
 @login_required
 def watching():
+
+    # get user id
     user_id = session["user_id"]
 
-    return render_template("watching.html")
+    # get watching media
+    watching_rows = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'watching'", user_id)
+
+    # send media to front end
+    return render_template("watching.html", media=watching_rows)
 
 # plan_to_watch route
 @app.route("/plan_to_watch")

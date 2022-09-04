@@ -87,12 +87,38 @@ def login():
 
     # User reached route via POST (as by submitting a form via POST)
     else:
-        return render_template("TODO.html")
+
+        # ensure user provided username
+        if not request.form.get("username"):
+            return apology("must provide username", 403)
+            
+        # ensure user provided username
+        if not request.form.get("password"):
+            return apology("must provide password", 403)
+
+        # query database for username
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
+        # Ensure username exists and password is correct
+        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
+            return apology("invalid username and/or password", 403)
+
+        # remember which user logged in
+        session["user_id"] = rows[0]["id"]
+
+        # redirect user to home page
+        return redirect("/")
 
 # logout route
 @app.route("/logout")
 def logout():
-    return render_template("TODO.html")
+    """Log user out"""
+
+    # Forget any user_id
+    session.clear()
+
+    # Redirect user to login form
+    return redirect("/")
 
 # add_media route
 @app.route("/add_media")

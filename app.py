@@ -226,7 +226,15 @@ def editList():
 @app.route("/watched")
 @login_required
 def watched():
-    return render_template("TODO.html")
+
+    # get user id
+    user_id = session["user_id"]
+
+    # get plan to watch media
+    watched = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'watched'", user_id)
+
+    # send media to front end
+    return render_template("watched.html", media=watched)
 
 # watching route
 @app.route("/watching")
@@ -246,7 +254,15 @@ def watching():
 @app.route("/plan_to_watch")
 @login_required
 def planToWatch():
-    return render_template("TODO.html")
+
+    # get user id
+    user_id = session["user_id"]
+
+    # get plan to watch media
+    planToWatch = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'planToWatch'", user_id)
+
+    # send media to front end
+    return render_template("planToWatch.html", media=planToWatch)
 
 
 # auto start flask

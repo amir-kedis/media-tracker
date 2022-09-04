@@ -50,4 +50,6 @@ A website to help you keep track of all the video media that you watched, are wa
 - [X] register page design
 - [X] add media design
 - [ ] make a design for edit list page
-- [ ] make a design for Watching
+- [X] make a design for Watching
+- [X] make watched, plan to watch pages
+- [ ] adjust add media so that you can't add Media twice

@@ -40,4 +40,5 @@ A website to help you keep track of all the video media that you watched, are wa
     - [X] python
     - [X] sass
     - [X] server
-- [ ] make a nav bar
+- [X] make a nav bar
+- [X] design the database

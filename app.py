@@ -11,6 +11,7 @@ from cs50 import SQL
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 from functools import wraps
+import datetime
 
 # ----------------------------------
 # ------: configurations
@@ -175,6 +176,46 @@ def addMedia():
     if request.method == "GET": 
         return render_template("add_media.html")
 
+    # User reached route via POST (as by submitting a form via POST)
+    else:
+        user_id = session["user_id"]
+        mediaName = request.form.get("media_name")
+        status = request.form.get("status")
+        type = request.form.get("type")
+        img = request.form.get("img")
+
+        # ensure user provide Media Name
+        if not mediaName:
+            return apology("Must Provide Media Name")
+
+        # ensure user provide Media Name
+        if not status:
+            return apology("Must Provide Status")
+
+        # ensure user provide Media Name
+        if not type:
+            return apology("Must Provide Type")
+
+        # if user provided no media put it to NULL
+        if not img:
+            return apology("Must Provide Image")
+
+        # get date
+        date = date = datetime.datetime.now()
+
+        # insert into database
+        db.execute("INSERT INTO media (user_id, name, type, status, img, date) VALUES (?,?,?,?,?,?)",
+                        user_id,
+                        mediaName,
+                        type,
+                        status,
+                        img,
+                        date)
+
+        # redirect the user to add again
+        return redirect("/add_media")
+
+        
 # edit_list route
 @app.route("/edit_list")
 @login_required

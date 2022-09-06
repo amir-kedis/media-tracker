@@ -14,8 +14,7 @@
 
             <div class="list__item">
                 <div class="list__image">
-                    <img src='{{ media["img"] }}'
-                        alt='{{ media["name"] }}'>
+                    <img src='{{ media["img"] }}' alt='{{ media["name"] }}'>
                 </div>
 
                 <div class="list__info">
@@ -35,8 +34,8 @@
                         <input name="id" type="number" value='{{ media["id"] }}' hidden>
                         <input class="btn btn--edit" type="submit" value="EDIT">
                     </form>
-                    <form name="id" action="/delete_item" method="post">
-                        <input type="number" value='{{ media["id"] }}' hidden>
+                    <form action="/delete_item" method="post">
+                        <input name="id" type="number" value='{{ media["id"] }}' hidden>
                         <input class="btn btn--danger" type="submit" value="DELETE">
                     </form>
                 </div>

@@ -291,6 +291,26 @@ def edit_list_item():
         # redirect the user to edit list
         return redirect("edit_list")
 
+# delete media item route
+@app.route("/delete_item", methods=["GET", "POST"])
+@login_required
+def deleteMedia():
+    # get user id
+    user_id = session["user_id"]
+
+    # get media id
+    media_id = request.form.get("id")
+
+    # check that we got media id
+    if not media_id:
+        return apology("Something went wrong!")
+
+    # delete selected media from database
+    db.execute("DELETE FROM media WHERE id = ?", media_id)
+
+    # redirect the user to edit_list
+    return redirect("/edit_list")
+
 # watched route
 @app.route("/watched")
 @login_required

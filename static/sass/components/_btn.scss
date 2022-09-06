@@ -13,11 +13,17 @@
   text-align: center;
   text-transform: uppercase;
 
+  transition: 0.1s;
+
   &--edit {
     background-color: #276B92;
   }
 
   &--danger {
     background-color: #922727;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 }

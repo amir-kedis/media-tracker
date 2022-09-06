@@ -458,12 +458,16 @@ body {
   border-radius: 8px;
   text-align: center;
   text-transform: uppercase;
+  transition: 0.1s;
 }
 .btn--edit {
   background-color: #276B92;
 }
 .btn--danger {
   background-color: #922727;
+}
+.btn:hover {
+  transform: scale(1.05);
 }
 
 .form {

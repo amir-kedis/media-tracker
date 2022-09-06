@@ -13,6 +13,11 @@ A website to help you keep track of all the video media that you watched, are wa
 - Jinja
 - SQL
 
+## Usage and explanation
+The first function of the website was the login/ logout ' register system. Users can input a name and password. We store the user's username and a hash of his password in our database due to security concerns. 
+You can add a media define name, status, type, and URL for an image of its cover. user's media are viewed as the status attribute. Then I store this media info in the database with the user id and date. 
+user can edit any media attribute. and can delete an entire media.
+
 ## Features to make:
 - [X] register
 - [X] login 
@@ -27,10 +32,11 @@ A website to help you keep track of all the video media that you watched, are wa
             - watching
             - plan to watch
         - date added
-- [ ] edit media 
-- [ ] remove media
-- [ ] index page show all media
+- [X] edit media 
+- [X] remove media
+- [X] index page show all media
 - [X] make a different view for ever status
+- [ ] responsive design
 - [ ] rating system
 
 
@@ -54,4 +60,4 @@ A website to help you keep track of all the video media that you watched, are wa
 - [X] make a design for Watching
 - [X] make watched, plan to watch pages
 - [X] adjust add media so that you can't add Media twice
-- [ ] make edit list 
+- [X] make edit list 

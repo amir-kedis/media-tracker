@@ -10,4 +10,12 @@
   padding: 15px 65px;
   align-self: center;
   border-radius: 8px;
+
+  &--edit {
+    background-color: #276B92;
+  }
+
+  &--danger {
+    background-color: #922727;
+  }
 }

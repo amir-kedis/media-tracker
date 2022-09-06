@@ -224,10 +224,21 @@ def addMedia():
 
         
 # edit_list route
-@app.route("/edit_list")
+@app.route("/edit_list", methods=["GET", "POST"])
 @login_required
 def editList():
-    return render_template("TODO.html")
+    
+    # if user gets by click edit_list link
+    if request.method == "GET":
+
+        # get user id
+        user_id = session["user_id"]
+
+        # get user list 
+        user_list = db.execute("SELECT * FROM media WHERE user_id = ?", user_id)
+        
+        # send the list to front-end
+        return render_template("edit_list.html", medias=user_list)
 
 # watched route
 @app.route("/watched")

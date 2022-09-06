@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block title %} LIST {% endblock %}
+{% block body %}
+<div class="editlist">
+
+    <h2 class="title">
+        YOUR LIST
+    </h2>
+
+    <div class="container">
+        <div class="list">
+
+            {% for media in medias %}
+
+            <div class="list__item">
+                <div class="list__image">
+                    <img src='{{ media["img"] }}'
+                        alt='{{ media["name"] }}'>
+                </div>
+
+                <div class="list__info">
+                    <div class="list__title">
+                        {{ media["name"] }}
+                    </div>
+                    <div class="list__type">
+                        {{ media["type"] }}
+                    </div>
+                    <div class="list__status">
+                        {{ media["status"] }}
+                    </div>
+                </div>
+
+                <div class="list__controls">
+                    <form action="/edit_list_item" method="post">
+                        <input name="id" type="number" value='{{ media["id"] }}' hidden>
+                        <input class="btn btn--edit" type="submit" value="EDIT">
+                    </form>
+                    <form name="id" action="/delete_item" method="post">
+                        <input type="number" value='{{ media["id"] }}' hidden>
+                        <input class="btn btn--danger" type="submit" value="DELETE">
+                    </form>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

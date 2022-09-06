@@ -457,6 +457,12 @@ body {
   align-self: center;
   border-radius: 8px;
 }
+.btn--edit {
+  background-color: #276B92;
+}
+.btn--danger {
+  background-color: #922727;
+}
 
 .form {
   display: flex;
@@ -603,4 +609,72 @@ body {
 }
 .watching__main {
   padding-bottom: 2rem;
+}
+
+.editlist .title {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.editlist .list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+.editlist .list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  background-color: var(--form-bgc);
+  box-shadow: -2px 8px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.editlist .list__image {
+  flex: 1;
+}
+.editlist .list__info {
+  flex: 2;
+}
+.editlist .list__title {
+  font-size: 44px;
+  font-weight: 700;
+  text-transform: capitalize;
+  width: 72%;
+  margin-bottom: 2rem;
+}
+.editlist .list__type {
+  font-size: 24px;
+  font-weight: 700;
+  color: #b4b4b4;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.editlist .list__status {
+  display: inline-block;
+  background-color: var(--btn-bgc);
+  padding: 9px 2rem;
+  border-radius: 38px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.editlist .list__controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.editlist .list__controls .btn {
+  width: 190px;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+.editlist .list img {
+  height: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */

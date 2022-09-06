@@ -17,7 +17,7 @@ A website to help you keep track of all the video media that you watched, are wa
 - [X] register
 - [X] login 
 - [X] Logout system
-- [ ] add a media
+- [X] add a media
     - media should have:
         - name
         - type
@@ -30,7 +30,8 @@ A website to help you keep track of all the video media that you watched, are wa
 - [ ] edit media 
 - [ ] remove media
 - [ ] index page show all media
-- [ ] make a different view for ever status
+- [X] make a different view for ever status
+- [ ] rating system
 
 
 ## expect to finish in: **4 days**
@@ -49,7 +50,8 @@ A website to help you keep track of all the video media that you watched, are wa
 - [X] logout page
 - [X] register page design
 - [X] add media design
-- [ ] make a design for edit list page
+- [X] make a design for edit list page
 - [X] make a design for Watching
 - [X] make watched, plan to watch pages
-- [ ] adjust add media so that you can't add Media twice
+- [X] adjust add media so that you can't add Media twice
+- [ ] make edit list 

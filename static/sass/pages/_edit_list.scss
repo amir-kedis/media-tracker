@@ -1,0 +1,78 @@
+.editlist {
+  .title {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      background-color: var(--form-bgc);
+      box-shadow: -2px 8px 4px 0 rgb(0 0 0 / 25%);
+    }
+
+    &__image {
+      flex: 1;
+    }
+
+    &__info {
+      flex: 2;
+    }
+
+    &__title {
+      font-size: 44px;
+      font-weight: 700;
+      text-transform: capitalize;
+      width: 72%;
+      margin-bottom: 2rem;
+    }
+
+    &__type {
+      font-size: 24px;
+      font-weight: 700;
+      color: #b4b4b4;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    &__status {
+      display: inline-block;
+      background-color: var(--btn-bgc);
+      padding: 9px 2rem;
+      border-radius: 38px;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &__controls {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+        align-items: center;
+      justify-content: center;
+      gap: 3rem;
+
+      .btn {
+        width: 190px;
+        padding: 10px 0;
+        font-size: 20px;
+        font-weight: 800;
+      }
+    }
+
+    img {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

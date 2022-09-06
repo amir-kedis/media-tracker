@@ -72,9 +72,9 @@ def index():
     user_id = session["user_id"]
 
     # select user media 
-    planToWatch = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'planToWatch'", user_id)
-    watched = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'watched'", user_id)
-    watching = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'watching'", user_id)
+    planToWatch = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'planToWatch' LIMIT 8", user_id)
+    watched = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'watched' LIMIT 8", user_id)
+    watching = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'watching' LIMIT 8", user_id)
 
     # send data to front-end and render the home page
     return render_template("index.html", planToWatch=planToWatch, watched=watched, watching=watching)

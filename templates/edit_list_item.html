@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block title %} EDIT LIST ITEM {% endblock %}
+{% block body %}
+<div class="editlist editlist_item">
+
+    <h2 class="title">
+        EDIT ITEM
+    </h2>
+
+    <div class="container">
+        <div class="list">
+
+            <form method="post" action="/edit_list_item" class="list__item">
+
+                <div class="list__image">
+                    <img src='{{ media["img"] }}' alt='{{ media["name"] }}'>
+                </div>
+
+                <div class="list__data">
+                    <ul class="form__inputs">
+
+                        <li class="form__input">
+                            <label for="media_name" class="form__label">Media Name</label>
+                            <input value='{{ media["name"] }}' autocomplete="off" autofocus type="text" name="media_name" class="input">
+                        </li>
+                        <li class="form__input">
+                            <label for="status" class="form__label">Status</label>
+                            <select class="form__select input" name="status">
+                                <option value="watched">Watched</option>
+                                <option value="watching">Watching</option>
+                                <option value="planToWatch">Plan To Watch</option>
+                            </select>
+                        </li>
+
+                        <li class="form__input">
+                            <label for="type" class="form__label">Type</label>
+                            <select class="form__select input" name="type">
+                                <option value="movie">Movie</option>
+                                <option value="series">Series</option>
+                                <option value="anime">Anime</option>
+                                <option value="shortFilm">Short Film</option>
+                                <option value="video">Video</option>
+                            </select>
+                        </li>
+                        <li class="form__input">    
+                            <label for="img" class="form__label">Cover Image Url</label>
+                            <input value='{{ media["img"] }}' autocomplete="off" autofocus type="url" name="img" class="input">
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="list__controls">
+                    <input name="id" type="number" value='{{ media["id"] }}' hidden>
+                    <input class="btn btn--edit" type="submit" value="EDIT">
+                    <a class="btn btn--danger" href="/edit_list">Cancel</a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

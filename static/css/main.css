@@ -456,6 +456,8 @@ body {
   padding: 15px 65px;
   align-self: center;
   border-radius: 8px;
+  text-align: center;
+  text-transform: uppercase;
 }
 .btn--edit {
   background-color: #276B92;
@@ -677,4 +679,11 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.editlist_item .list img {
+  height: 600px;
+}
+.editlist_item .form__inputs {
+  gap: 30px;
 }/*# sourceMappingURL=main.css.map */

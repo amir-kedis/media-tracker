@@ -240,6 +240,57 @@ def editList():
         # send the list to front-end
         return render_template("edit_list.html", medias=user_list)
 
+# edit_list_item route
+@app.route("/edit_list_item", methods=["GET", "POST"])
+@login_required
+def edit_list_item():
+    
+    # if user gets by click edit form
+    if request.method == "GET":
+
+        # get user id
+        user_id = session["user_id"]
+
+        # get media id
+        media_id = request.args.get("id")
+
+        # check that we got media id
+        if not media_id:
+            return apology("Something went wrong!")
+
+        # Media .info
+        media_info = db.execute("SELECT * FROM media WHERE id = ?", media_id)[0]
+
+        print(media_info)
+        
+        # send the list to front-end
+        return render_template("edit_list_item.html", media=media_info)
+
+    # edit media accept
+    else:
+
+        # get user id
+        user_id = session["user_id"]
+
+        # get media id
+        media_id = request.form.get("id")
+
+        # media_info
+        media_name = request.form.get("media_name")
+        media_status = request.form.get("status")
+        media_type = request.form.get("type")
+        media_img = request.form.get("img")
+
+        # ensure all fields are given
+        if not media_name or not media_status or not media_type or not media_img:
+            return apology("All Felids must be given")
+
+        # update the database
+        db.execute("UPDATE media SET name = ?, type = ?, status = ?, img = ? WHERE id = ?", media_name, media_type, media_status, media_img, media_id)
+
+        # redirect the user to edit list
+        return redirect("edit_list")
+
 # watched route
 @app.route("/watched")
 @login_required

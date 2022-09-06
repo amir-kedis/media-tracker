@@ -518,6 +518,10 @@ body {
 .title {
   text-align: center;
   font-size: 30px;
+  text-transform: capitalize;
+}
+.title--left {
+  text-align: left;
 }
 
 .grid {
@@ -686,4 +690,27 @@ body {
 }
 .editlist_item .form__inputs {
   gap: 30px;
+}
+
+.header {
+  height: calc(100vh - 75px);
+  background-image: url(/static/imgs/film-bg-1.png);
+  background-size: cover;
+  background-position: bottom;
+}
+.header .overlay {
+  height: 100%;
+  background-color: rgba(8, 26, 41, 0.68);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .page-title {
+  max-width: 60vw;
+}
+.header .page-title h1 {
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 135px;
+  text-transform: capitalize;
 }/*# sourceMappingURL=main.css.map */

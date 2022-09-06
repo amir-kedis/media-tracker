@@ -67,7 +67,18 @@ def login_required(f):
 @app.route("/")
 @login_required
 def index():
-    return render_template("TODO.html")
+    
+    # get user id
+    user_id = session["user_id"]
+
+    # select user media 
+    planToWatch = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'planToWatch'", user_id)
+    watched = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'watched'", user_id)
+    watching = db.execute("SELECT * FROM media WHERE user_id = ? AND status = 'watching'", user_id)
+
+    # send data to front-end and render the home page
+    return render_template("index.html", planToWatch=planToWatch, watched=watched, watching=watching)
+
 
 # register route
 @app.route("/register", methods=["GET", "POST"])

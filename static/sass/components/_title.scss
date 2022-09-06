@@ -1,4 +1,9 @@
 .title {
   text-align: center;
   font-size: 30px;
+  text-transform: capitalize;
+
+  &--left {
+    text-align: left;
+  }
 }

@@ -1,0 +1,25 @@
+.header {
+    height: calc(100vh - 75px);
+    background-image: url(/static/imgs/film-bg-1.png);
+    background-size: cover;
+    background-position: bottom;
+
+    .overlay {
+        height: 100%;
+        background-color: rgb(8 26 41 / 68%);
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+    }
+
+    .page-title {
+        max-width: 60vw;
+
+        h1 {
+            font-size: 96px;
+            font-weight: 800;
+            line-height: 135px;
+            text-transform: capitalize;
+        }
+    }
+}

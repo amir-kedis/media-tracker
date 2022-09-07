@@ -7,6 +7,17 @@
         YOUR LIST
     </h2>
 
+
+    {% if not medias %}
+    
+    <div class="container no-media">
+        <p>There is no media in Your List yet</p>
+        <a href="/add_media" class="btn">ADD MEDIA</a>
+    </div>
+    
+    {% else %}
+
+
     <div class="container">
         <div class="list">
 
@@ -45,6 +56,8 @@
 
         </div>
     </div>
+
+    {% endif %}
 
 </div>
 {% endblock %}

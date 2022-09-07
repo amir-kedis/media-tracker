@@ -18,29 +18,40 @@
         </h2>
     </div>
 
-        <div class="watching__main">
-            <div class="container">
-                <div class="grid">
-                    {% for row in planToWatch %}
-                    <div class="card">
-                        <div class="card__image">
-                            <img src='{{ row["img"] }}' alt='{{ row["name"] }}'>
-                        </div>
-        
-                        <div class="card__title">
-                            {{ row["name"] }}
-                        </div>
-                        <div class="card__type">
-                            {{ row["type"] }}
-                        </div>
-                        <div class="card__status">
-                            {{ row["status"] }}
-                        </div>
+    {% if not planToWatch %}
+
+    <div class="container no-media">
+        <p>There is no media in this category yet</p>
+        <a href="/add_media" class="btn">ADD MEDIA</a>
+    </div>
+
+    {% else %}
+
+    <div class="watching__main">
+        <div class="container">
+            <div class="grid">
+                {% for row in planToWatch %}
+                <div class="card">
+                    <div class="card__image">
+                        <img src='{{ row["img"] }}' alt='{{ row["name"] }}'>
                     </div>
-                    {% endfor %}
+
+                    <div class="card__title">
+                        {{ row["name"] }}
+                    </div>
+                    <div class="card__type">
+                        {{ row["type"] }}
+                    </div>
+                    <div class="card__status">
+                        {{ row["status"] }}
+                    </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
+    </div>
+
+    {% endif %}
 
 </div>
 <div class="watching">
@@ -50,6 +61,15 @@
             Watching
         </h2>
     </div>
+
+    {% if not watching %}
+
+    <div class="container no-media">
+        <p>There is no media in this category yet</p>
+        <a href="/add_media" class="btn">ADD MEDIA</a>
+    </div>
+
+    {% else %}
 
     <div class="watching__main">
         <div class="container">
@@ -75,6 +95,9 @@
         </div>
     </div>
 
+    {% endif %}
+
+
 </div>
 <div class="watching">
 
@@ -83,6 +106,16 @@
             Watched
         </h2>
     </div>
+
+    {% if not watched %}
+
+    <div class="container no-media">
+        <p>There is no media in this category yet</p>
+        <a href="/add_media" class="btn">ADD MEDIA</a>
+    </div>
+
+    {% else %}
+
 
     <div class="watching__main">
         <div class="container">
@@ -107,6 +140,8 @@
             </div>
         </div>
     </div>
+
+    {% endif %}
 
 </div>
 {% endblock %}

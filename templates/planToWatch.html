@@ -7,6 +7,15 @@
         Plan To Watch
     </h2>
 
+    {% if not media %}
+
+    <div class="container no-media">
+        <p>There is no media in this category yet</p>
+        <a href="/add_media" class="btn">ADD MEDIA</a>
+    </div>
+
+    {% else %}
+
     <div class="watching__main">
         <div class="container">
             <div class="grid">
@@ -30,6 +39,8 @@
             </div>
         </div>
     </div>
+
+    {% endif %}
 
 </div>
 {% endblock %}

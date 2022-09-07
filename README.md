@@ -8,6 +8,7 @@ A website to help you keep track of all the video media that you watched, are wa
 - Flask
 - HTML
 - SASS
+- BEM
 - CSS
 - Javascript
 - Jinja
@@ -40,8 +41,47 @@ There is also an apology page that appears whenever the input is not correct or 
 - [X] remove media
 - [X] index page show all media
 - [X] make a different view for ever status
-- [ ] responsive design
-- [ ] rating system
+
+## Project structure and tree Explanation
+- app.py
+    - the part where main application is written, specifying the routes and handling the database.
+- media.db
+    - main database having two tables now, one that stores users data and other one to store media data with a user id that correlates both of them.
+- schema.sql
+    - database schema
+- requirements.txt
+    - main libs that are required for this project
+- remove-media.sql
+    - empties media table for dev purposes only
+- .gitignore
+    - files and directories to not push to git
+- templates/
+    - stores every page template 
+        - main pages
+            - index.html
+            - register.html
+            - login.html
+            - planToWatch.html
+            - watched.html
+            - watching.html
+        - helper pages
+            - error.html
+            - layout.html
+            - TODO.html
+- static/
+    - stores static files like css, js and images
+- static/sass
+    - chose to use sass to make the development more organized
+- static/sass/global
+    - global rules, normalize, colors, typography helper classes and more
+- static/sass/components
+    - styles for each component used in the page
+- static/sass/pages
+    - to control the flow of components within a certain page
+- static/sass/util
+    - mixins
+
+
 
 
 ## expect to finish in: **4 days**
@@ -53,7 +93,7 @@ There is also an apology page that appears whenever the input is not correct or 
     - [X] server
 - [X] make a nav bar
 - [X] design the database
-- [X] connect data base
+- [X] connect database
 - [X] error page
 - [X] require login wrapper
 - [X] login page

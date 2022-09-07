@@ -15,8 +15,12 @@ A website to help you keep track of all the video media that you watched, are wa
 
 ## Usage and explanation
 The first function of the website was the login/ logout ' register system. Users can input a name and password. We store the user's username and a hash of his password in our database due to security concerns. 
-You can add a media define name, status, type, and URL for an image of its cover. user's media are viewed as the status attribute. Then I store this media info in the database with the user id and date. 
-user can edit any media attribute. and can delete an entire media.
+
+You can add a media define name, status, type, and URL for an image of its cover. user's media are viewed as the status attribute. Then I store this media info in the database with the user id and date.
+
+user can edit any media attribute and delete an entire media.
+
+There is also an apology page that appears whenever the input is not correct or when an internal error occurs.
 
 ## Features to make:
 - [X] register
@@ -61,3 +65,7 @@ user can edit any media attribute. and can delete an entire media.
 - [X] make watched, plan to watch pages
 - [X] adjust add media so that you can't add Media twice
 - [X] make edit list 
+
+### Notices
+-  Cinema Photo by <a href="https://unsplash.com/@felixmooneeram?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Felix Mooneeram</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  

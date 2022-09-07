@@ -105,6 +105,15 @@ There is also an apology page that appears whenever the input is not correct or 
 - [X] make watched, plan to watch pages
 - [X] adjust add media so that you can't add Media twice
 - [X] make edit list 
+- [X] design edit_list_item page
+- [X] design home page
+- [X] design no-media component
+- [X] update the database when media is edited
+- [X] delete media route
+- [X] adjust apology page
+- [X] edit catagories to include no-media component
+- [X] edit the colors of homepage cover
+- [X] make header component
 
 ### Notices
 -  Cinema Photo by <a href="https://unsplash.com/@felixmooneeram?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Felix Mooneeram</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

@@ -1,7 +1,10 @@
 # media-tracker
 
+#### Video Demo:  https://youtu.be/2NUDqkbkbWs
+
 ## Description
 A website to help you keep track of all the video media that you watched, are watching or planing to watch.
+
 
 ## technology used:
 - Python
